@@ -1,5 +1,5 @@
 {% set name = "pyink" %}
-{% set version = "23.1.1" %}
+{% set version = "23.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyink-{{ version }}.tar.gz
-  sha256: b1020226e46bde48dc13dcda5e3b4b7da7f8265ebffcd84de73053146aac1f98
+  sha256: c252688d2c20cd00033a4b8aa74781f059a06481701d88453b99ca844e9d5d87
 
 build:
   noarch: python
@@ -29,7 +29,7 @@ requirements:
     - packaging >=22.0
     - pathspec >=0.9.0
     - platformdirs >=2
-    - tomli >=1.1.0 
+    - tomli >=1.1.0
     - typed-ast >=1.4.2
     - typing-extensions >=3.10.0.0
     - black >=22.12.0
