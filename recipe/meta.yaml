@@ -1,5 +1,5 @@
 {% set name = "pyink" %}
-{% set version = "23.3.1" %}
+{% set version = "23.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyink-{{ version }}.tar.gz
-  sha256: c252688d2c20cd00033a4b8aa74781f059a06481701d88453b99ca844e9d5d87
+  sha256: 589bc3beedb52cefbaa9e1543d374bef1b7a716c96bf7aa852eaf32d6496d969
 
 build:
   noarch: python
