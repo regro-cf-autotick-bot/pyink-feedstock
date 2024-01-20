@@ -31,7 +31,7 @@ requirements:
     - platformdirs >=2
     - tomli >=1.1.0
     - typing-extensions >=4.0.1
-    - black ==23.12.1
+    - black =={{ version }}
 
 test:
   imports:
