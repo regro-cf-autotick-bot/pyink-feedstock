@@ -1,5 +1,5 @@
 {% set name = "pyink" %}
-{% set version = "23.10.0" %}
+{% set version = "23.12.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyink-{{ version }}.tar.gz
-  sha256: 99742f8a30b36e39898d2f5dde65fdb27100ce2cc2b48273e950c18338d657fa
+  sha256: cc940ec3b1c0f746c61e10f1e28a5b69a274da20843e14ee14fbb4130b3a4853
 
 build:
   noarch: python
@@ -18,21 +18,20 @@ build:
 
 requirements:
   host:
-    - python >=3.7
-    - hatchling >=1.8.0
+    - python >=3.8
+    - hatchling >=1.20.0
     - hatch-vcs
     - pip
   run:
-    - python >=3.7
+    - python >=3.8
     - click >=8.0.0
     - mypy_extensions >=0.4.3
     - packaging >=22.0
     - pathspec >=0.9.0
     - platformdirs >=2
     - tomli >=1.1.0
-    - typed-ast >=1.4.2
-    - typing-extensions >=3.10.0.0
-    - black >=22.12.0
+    - typing-extensions >=4.0.1
+    - black =={{ version }}
 
 test:
   imports:
