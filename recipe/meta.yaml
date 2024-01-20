@@ -18,21 +18,20 @@ build:
 
 requirements:
   host:
-    - python >=3.7
-    - hatchling >=1.8.0
+    - python >=3.8
+    - hatchling >=1.20.0
     - hatch-vcs
     - pip
   run:
-    - python >=3.7
+    - python >=3.8
     - click >=8.0.0
     - mypy_extensions >=0.4.3
     - packaging >=22.0
     - pathspec >=0.9.0
     - platformdirs >=2
     - tomli >=1.1.0
-    - typed-ast >=1.4.2
-    - typing-extensions >=3.10.0.0
-    - black >=22.12.0
+    - typing-extensions >=4.0.1
+    - black ==23.12.1
 
 test:
   imports:
