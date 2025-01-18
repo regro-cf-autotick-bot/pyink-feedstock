@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyink-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyink-{{ version }}.tar.gz
   sha256: 90468db7148bcef7d4ceb3513f75346331f4f61cc13db940d996728602925603
 
 build:
@@ -14,16 +14,16 @@ build:
   entry_points:
     - pyink = pyink:patched_main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - hatchling >=1.20.0
     - hatch-vcs
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - click >=8.0.0
     - mypy_extensions >=0.4.3
     - packaging >=22.0
@@ -41,6 +41,7 @@ test:
     - pyink --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/google/pyink
